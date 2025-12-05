@@ -8,25 +8,27 @@
 
 <div align="center">
 
-[![Contributors](https://img.shields.io/github/contributors/aditsuru/research-engine?color=white&style=flat)][contributors-url]
-[![Forks](https://img.shields.io/github/forks/aditsuru/research-engine?color=white&style=flat)][forks-url]
-[![Stars](https://img.shields.io/github/stars/aditsuru/research-engine?color=white&style=flat)][stars-url]
-[![Open Issues](https://img.shields.io/github/issues/aditsuru/research-engine?color=white&style=flat)][issues-url]
-[![Closed Issues](https://img.shields.io/github/issues-closed/aditsuru/research-engine?color=white&style=flat)][closed-issues-url]
-[![Open PRs](https://img.shields.io/github/issues-pr/aditsuru/research-engine?color=white&style=flat)][prs-url]
-[![Closed PRs](https://img.shields.io/github/issues-pr-closed/aditsuru/research-engine?color=white&style=flat)][closed-prs-url]
-[![License](https://img.shields.io/github/license/aditsuru/research-engine?color=white&style=flat)][license-url]
+[![Contributors](https://img.shields.io/github/contributors/Homies-Tech-Innovation/research-engine?color=white&style=flat)][contributors-url]
+[![Forks](https://img.shields.io/github/forks/Homies-Tech-Innovation/research-engine?color=white&style=flat)][forks-url]
+[![Stars](https://img.shields.io/github/stars/Homies-Tech-Innovation/research-engine?color=white&style=flat)][stars-url]
+[![Open Issues](https://img.shields.io/github/issues/Homies-Tech-Innovation/research-engine?color=white&style=flat)][issues-url]
+[![Closed Issues](https://img.shields.io/github/issues-closed/Homies-Tech-Innovation/research-engine?color=white&style=flat)][closed-issues-url]
+[![Open PRs](https://img.shields.io/github/issues-pr/Homies-Tech-Innovation/research-engine?color=white&style=flat)][prs-url]
+[![Closed PRs](https://img.shields.io/github/issues-pr-closed/Homies-Tech-Innovation/research-engine?color=white&style=flat)][closed-prs-url]
+[![License](https://img.shields.io/github/license/Homies-Tech-Innovation/research-engine?color=white&style=flat)][license-url]
 [![Discord](https://img.shields.io/discord/1313767817996402698?style=flat&logo=discord&logoColor=white&label=Discord&color=white)][discord-url]
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-%230db7ed.svg?style=flat&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-%230db7ed.svg?style=flat&logo=react&logoColor=white)
-![Python](https://img.shields.io/badge/Python-%230db7ed.svg?style=flat&logo=python&logoColor=white)
+![React](https://img.shields.io/badge/Express-%230db7ed.svg?style=flat&logo=express&logoColor=white)
+![Python](https://img.shields.io/badge/Redis-%230db7ed.svg?style=flat&logo=Redis&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)
 
 </div>
 <br>
 
 **Research Engine** is an AI-assisted research workflow that combines web search, data storage, and structured collaboration between the user and the model. It is designed to help gather information, organize it, and generate useful written outputs based on the collected material.
+
+**Client Repo Link:** [Research Engine Client](https://github.com/Homies-Tech-Innovation/research-engine-client)
 
 ### Features
 
@@ -64,13 +66,11 @@ This system follows a guided process to ensure clarity and relevance throughout 
 
 A huge thank you to all our amazing contributors who have helped make Research Engine better! We appreciate every contribution, whether it's code, documentation, design, or community support.
 
-<a href="https://github.com/aditsuru/research-engine/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=aditsuru/research-engine&max=100&columns=20&v=1" alt="Contributors" />
+<a href="https://github.com/Homies-Tech-Innovation/research-engine/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Homies-Tech-Innovation/research-engine&max=100&columns=20&v=1" alt="Contributors" />
 </a>
 
 Want to see your profile here? Check out our [open issues](./issues) and start contributing today!
-
----
 
 Made with ❤️ by the Community
 
