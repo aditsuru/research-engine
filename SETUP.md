@@ -2,10 +2,10 @@
 
 ### Step 1: Install `mise` (One-Time Setup)
 
-| OS                       | Installation Command      |
-| ------------------------ | ------------------------- | --- |
-| **Linux / macOS**        | `curl https://mise.run    | sh` |
-| **Windows (PowerShell)** | `winget install jdx.mise` |
+| OS                       | Installation Command          |
+| ------------------------ | ----------------------------- |
+| **Linux / macOS**        | `curl https://mise.run \| sh` |
+| **Windows (PowerShell)** | `winget install jdx.mise`     |
 
 ### Step 2: Configure Your Shell (One-Time Setup)
 

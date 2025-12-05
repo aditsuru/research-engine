@@ -24,34 +24,33 @@
 ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)
 
 </div>
-<br>
 
 **Research Engine** is an AI-assisted research workflow that combines web search, data storage, and structured collaboration between the user and the model. It is designed to help gather information, organize it, and generate useful written outputs based on the collected material.
 
 **Client Repo Link:** [Research Engine Client](https://github.com/Homies-Tech-Innovation/research-engine-server-client)
 
-### Features
+## Features
 
-#### Web Search
+### Web Search
 
 The system can perform targeted web searches to gather information relevant to the user’s research topic.
 
-#### Vector Database Storage
+### Vector Database Storage
 
 All retrieved data can be stored in a vector database.
 
 - Users can browse and review stored items manually.
 - The AI can reference this data during conversations or reasoning through Retrieval-Augmented Generation (RAG).
 
-#### Context-Aware Conversations
+### Context-Aware Conversations
 
 The AI can use the stored information to discuss the topic, answer questions, and provide insights grounded in collected data.
 
-#### AI-Generated Artifacts
+### AI-Generated Artifacts
 
 Users can request written outputs—such as summaries, reports, or drafts—which the AI generates based on the stored materials. These artifacts can then be edited by the user.
 
-#### Structured Research Flow
+### Structured Research Flow
 
 This system follows a guided process to ensure clarity and relevance throughout the research:
 
