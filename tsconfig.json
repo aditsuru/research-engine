@@ -28,10 +28,16 @@
 
     // Path aliases
     "paths": {
+      "@middleware": ["./src/middleware"],
+      "@config": ["./src/config"],
+      "@utils": ["./src/utils"],
+
+      // Nested
       "@/*": ["./src/*"],
       "@middleware/*": ["./src/middleware/*"],
       "@config/*": ["./src/config/*"],
       "@utils/*": ["./src/utils/*"]
     }
-  }
+  },
+  "include": ["src/**/*", "types/**/*"]
 }

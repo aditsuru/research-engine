@@ -1,3 +1,4 @@
-import { env } from '@config/env';
+import { config } from '@config';
+import { utils } from '@utils';
 
-console.log(env);
+console.log();

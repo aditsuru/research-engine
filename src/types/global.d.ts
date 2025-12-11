@@ -1,0 +1,7 @@
+import * as express from 'express-serve-static-core';
+
+declare module 'express-serve-static-core' {
+  interface Response {
+    success: <T = unknown>(data: T, message?: string, statusCode?: number) => void;
+  }
+}
