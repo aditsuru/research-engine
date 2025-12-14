@@ -34,7 +34,7 @@ export const httpLogger = pinoHttp({
     context: 'production',
   }),
 
-  // Ignore non essential routes
+  // Ignore non-essential routes
   autoLogging: {
     ignore: (req: Request) => shouldLogRequest(req.url),
   },

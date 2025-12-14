@@ -23,7 +23,7 @@ export const logger = {
       pinoLogger.error(arg, msg);
       return;
     }
-    if (msg) console.error(`[ERROR] ${msg}`);
+    if (msg) console.error(`[${new Date().toISOString()}] ERROR: ${msg}`);
     console.error(arg);
   },
   debug: (arg: unknown, msg?: string) => pinoLogger.debug(arg, msg),
