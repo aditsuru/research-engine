@@ -10,13 +10,13 @@ const envSchema = z.object({
       "Invalid format! Use a non-zero number followed by 'b' or 'kb' or 'mb'"
     )
     .default('10mb'),
+  LOG_LEVEL: z.enum(['info', 'error', 'debug', 'warn']).default('info'),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);
 
 if (!parsedEnv.success) {
-  // TODO: replace with logger
-  console.log(z.prettifyError(parsedEnv.error));
+  console.error(z.prettifyError(parsedEnv.error));
   process.exit(1);
 }
 

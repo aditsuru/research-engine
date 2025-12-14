@@ -1,5 +1,5 @@
 import { config } from '@config';
-import { error } from '@utils';
+import { error, logger } from '@utils';
 import type { NextFunction, Request, Response } from 'express';
 
 export const globalErrorHandler = (
@@ -31,8 +31,7 @@ export const globalErrorHandler = (
 
   // Log for crashes
   if (statusCode === 500) {
-    // TODO: use app logger
-    console.error(`✘ Error occurred while processing request\n`, err);
+    logger.error(err, `✘ Error occurred while processing request\n`);
   }
 
   // Send final response
