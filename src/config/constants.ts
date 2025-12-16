@@ -13,3 +13,5 @@ export const IGNORED_ROUTES = new Set([
   '/robots.txt',
   '/sitemap.xml',
 ]);
+
+export const API_PREFIX = '/api/v1';

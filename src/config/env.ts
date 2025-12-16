@@ -19,6 +19,15 @@ const envSchema = z.object({
   RATE_LIMIT_GUEST_WINDOW_SECONDS: z.coerce.number().positive().default(60),
   RATE_LIMIT_AUTH_MAX_REQUESTS: z.coerce.number().positive().default(100),
   RATE_LIMIT_AUTH_WINDOW_SECONDS: z.coerce.number().positive().default(60),
+
+  // CORS
+  CORS_ORIGIN: z.url().refine(
+    (url) => {
+      const parsed = new URL(url);
+      return parsed.protocol === 'https:' || parsed.protocol === 'http:';
+    },
+    { message: 'CORS origin must be http or https' }
+  ),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);

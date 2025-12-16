@@ -1,38 +1,40 @@
 import { config } from '@config';
 import { globalErrorHandler, rateLimiter, responseEnhancer } from '@middleware';
 import { httpLogger } from '@utils/logger/httpLogger';
-import express, { type Request, type Response } from 'express';
+import compression from 'compression';
+import cors from 'cors';
+import express from 'express';
 import helmet from 'helmet';
+import hpp from 'hpp';
 import responseTime from 'response-time';
+import routes from '@/routes';
 
 const app = express();
 
 // Middlewares
 app.use(helmet());
 app.use(responseTime());
+app.use(
+  cors({
+    origin: config.env.CORS_ORIGIN || '*',
+    credentials: true,
+  })
+);
+app.use(compression());
 app.use(httpLogger);
 app.use(rateLimiter);
 app.use(express.json({ limit: config.env.MAX_PAYLOAD_SIZE }));
+app.use(
+  express.urlencoded({
+    extended: true,
+    limit: config.env.MAX_PAYLOAD_SIZE,
+  })
+);
+app.use(hpp());
 app.use(responseEnhancer);
 
-// Test endpoints
-app.get('/', (_req: Request, res: Response) => {
-  res.success({ worked: true });
-});
-
-app.get('/err', (_req: Request, _res: Response) => {
-  type User = {
-    id: number;
-    name: string;
-  };
-
-  function getUser(): User | undefined {
-    return undefined; // simulating a missing user
-  }
-
-  const user = getUser();
-  console.log(user!.name);
-});
+// Mount home router
+app.use(config.constants.API_PREFIX, routes);
 
 // Global Error handler
 app.use(globalErrorHandler);
