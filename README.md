@@ -27,7 +27,7 @@
 
 **Research Engine** is an AI-assisted research workflow that combines web search, data storage, and structured collaboration between the user and the model. It is designed to help gather information, organize it, and generate useful written outputs based on the collected material.
 
-**Client Repo Link:** [Research Engine Client](https://github.com/Homies-Tech-Innovation/research-engine-server-client)
+**Client Repo Link:** [Research Engine Client](https://github.com/Homies-Tech-Innovation/research-engine-client)
 
 ## Features
 
