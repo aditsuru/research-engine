@@ -4,7 +4,15 @@ export { connections };
 
 export async function initRedis() {
   const redisClients = getRedisClients();
-  await Promise.all(redisClients.map((client) => client.connect()));
+
+  await Promise.all(
+    redisClients.map((client) => {
+      if (client.status === 'wait') {
+        return client.connect();
+      }
+      return Promise.resolve();
+    })
+  );
 }
 
 export async function shutdownRedis() {

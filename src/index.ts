@@ -1,11 +1,9 @@
-import type { Server } from 'node:http';
 import { config } from '@config';
 import { initRedis, shutdownRedis } from '@redis';
 import { logger } from '@utils';
-import app from '@/app';
+import { server } from '@/server';
 
 // Helper variables
-let server: Server;
 let isShuttingDown = false;
 
 // Start the app
@@ -15,7 +13,7 @@ const init = async () => {
   await initRedis();
   logger.info('✔ Redis connections initialized');
 
-  server = app.listen(config.env.PORT, () => {
+  server.listen(config.env.PORT, () => {
     logger.info(`\x1b[92m✔ server running at\x1b[0m http://localhost:${config.env.PORT}`);
   });
 };

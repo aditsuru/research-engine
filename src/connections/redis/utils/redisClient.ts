@@ -2,12 +2,23 @@ import { logger } from '@utils';
 import Redis, { type RedisOptions } from 'ioredis';
 import { getNewConfig, type RedisConfig } from './handleConfig';
 
+const connectionPool: Map<string, Redis> = new Map();
+
 export function redisFromEnv(name: string, options: Partial<RedisOptions> = {}): Redis {
   const config = getNewConfig(`${name}_URL`);
+  const connectionKey = `${config.host}:${config.port}/${config.db || 0}`;
 
+  if (connectionPool.has(connectionKey)) {
+    const masterClient = connectionPool.get(connectionKey)!;
+
+    const clonedClient = masterClient.duplicate();
+    attachRedisEvents(name, clonedClient);
+    return clonedClient;
+  }
   const client = createClient(config, options);
   attachRedisEvents(name, client);
 
+  connectionPool.set(connectionKey, client);
   return client;
 }
 
